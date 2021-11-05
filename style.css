@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+	--kumbh: 'Kumbh Sans';
+}
+
+main {
+	max-width: 327px;
+	margin: auto;
+	font-family: var(--kumbh);
+}
+summary {
+	list-style: none; /*remove default pointer*/
+}
+summary::-webkit-details-marker {
+	display: none;
+}
+details summary { 
+    cursor: pointer;
+  }
+
+  details summary > * { 
+    display: inline;
+  }
+  summary {
+  list-style-image: url(images/icon-arrow-down.svg);
+    direction: rtl;
+    unicode-bidi: plaintext; /*From chrome inspector to remove question marks*/
+    text-align: left;
+}
+
+summary::-webkit-details-marker {
+  background: url(images/icon-arrow-down.svg);
+  color: transparent;
+}
