@@ -9,6 +9,9 @@ main {
 	margin: auto;
 	font-family: var(--kumbh);
 }
+h1 {
+	text-align: center;
+}
 summary {
 	list-style: none; /*remove default pointer*/
 }
@@ -18,6 +21,9 @@ summary::-webkit-details-marker {
 details summary { 
     cursor: pointer;
   }
+ details[open] summary {
+ 	font-weight: 700;
+ }
 
   details summary > * { 
     display: inline;
@@ -32,4 +38,12 @@ details summary {
 summary::-webkit-details-marker {
   background: url(images/icon-arrow-down.svg);
   color: transparent;
+}
+
+.attribution { 
+	font-size: 11px; text-align: center; 
+	grid-area: attribution;
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
 }
