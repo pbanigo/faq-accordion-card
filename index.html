@@ -10,8 +10,11 @@
 <body>
   <main>
   <div id="content">
+    <div id="image">
     <img src="images/illustration-woman-online-mobile.svg">
+    </div>
     <h1>FAQ</h1>
+    <div id="faq">
     <details>
       <summary>
         How many team members can I invite?
@@ -54,22 +57,21 @@
         Chat and email support is available 24/7. Phone lines are open during normal business hours.
       </div>
     </details>
+    </div>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
   </main>
-  <!-- fro stackoverflow to make others close when one is open --> 
+  <!-- fro stackoverflow to make others close when one is open https://stackoverflow.com/questions/16751345/automatically-close-all-the-other-details-tags-after-opening-a-specific-detai/56194608--> 
   <script type="text/javascript">
     const All_Details = document.querySelectorAll('details');
-
-All_Details.forEach(deet=>{
-  deet.addEventListener('toggle', toggleOpenOneOnly)
-})
-
-function toggleOpenOneOnly(e) {
-  if (this.open) {
+    All_Details.forEach(deet=>{
+      deet.addEventListener('toggle', toggleOpenOneOnly)
+    })
+    function toggleOpenOneOnly(e) {
+      if (this.open) {
     All_Details.forEach(deet=>{
       if (deet!=this && deet.open) deet.open = false
     });

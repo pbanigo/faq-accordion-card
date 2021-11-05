@@ -2,36 +2,38 @@
 
 :root {
 	--kumbh: 'Kumbh Sans';
-/*#### Text*/
+	/*#### Text*/
+	--vdd-blue: hsl(238, 29%, 16%); /* Very dark desaturated */
+	--soft-red: hsl(14, 88%, 65%);
+	/*Background gradient:*/
 
--- Very dark desaturated blue: hsl(238, 29%, 16%);
--- Soft red: hsl(14, 88%, 65%);
-
-
-
-/*Background gradient:*/
-
-- Soft violet: hsl(273, 75%, 66%);
-- Soft blue: hsl(240, 73%, 65%);
+	--soft-violet: hsl(273, 75%, 66%);
+	--soft-blue: hsl(240, 73%, 65%);
 
 
-/*#### Text*/
+	/*#### Text*/
 
--- Very dark grayish blue: hsl(237, 12%, 33%);
--- Dark grayish blue: hsl(240, 6%, 50%);
+	--vdg-blue: hsl(237, 12%, 33%);
+	--dg-blue: hsl(240, 6%, 50%);
 
-/*#### Divider*/
+	/*#### Divider*/
 
--- Light grayish blue: hsl(240, 5%, 91%);
+	--lg-blue: hsl(240, 5%, 91%);
 }
+
 body {
 	font-size: 12px;
+	background-color: var(--soft-blue);
+	background-image: linear-gradient(0deg, var(--soft-blue) , var(--soft-violet));
 }
 
 main {
 	max-width: 327px;
 	margin: auto;
+	margin-top: 150px;
 	font-family: var(--kumbh);
+	background-color: white;
+	border-radius: 20px;
 }
 h1 {
 	text-align: center;
@@ -45,7 +47,7 @@ summary::-webkit-details-marker {
 details summary { 
     cursor: pointer;
   }
- details[open] summary {
+details[open] summary {
  	font-weight: 700;
  }
 
@@ -53,15 +55,24 @@ details summary {
     display: inline;
   }
   summary {
-  list-style-image: url(images/icon-arrow-down.svg);
+  	list-style-image: url(images/icon-arrow-down.svg);
     direction: rtl;
     unicode-bidi: plaintext; /*From chrome inspector to remove question marks*/
     text-align: left;
+    padding: 20px 0px;
 }
 
 summary::-webkit-details-marker {
   background: url(images/icon-arrow-down.svg);
   color: transparent;
+}
+details div {
+
+    border-bottom: 1px var(--lg-blue) solid;
+    padding-bottom: 20px;
+}
+img {
+	width: 240px;
 }
 
 .attribution { 
@@ -70,4 +81,13 @@ summary::-webkit-details-marker {
 }
 .attribution a { 
 	color: hsl(228, 45%, 44%); 
+}
+#image {
+	background-image: url(images/bg-pattern-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+}
+#faq {
+    padding: 0px 25px 40px 25px;
 }
