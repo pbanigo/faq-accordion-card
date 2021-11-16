@@ -73,6 +73,9 @@ details div {
 }
 img {
 	width: 240px;
+    position: absolute;
+    top: 40px;
+    left: 240px;
 }
 
 .attribution { 
@@ -85,8 +88,9 @@ img {
 #image {
 	background-image: url(images/bg-pattern-mobile.svg);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top;
 	text-align: center;
+    height: 140px;
 }
 #faq {
     padding: 0px 25px 40px 25px;
