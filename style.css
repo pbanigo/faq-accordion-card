@@ -73,9 +73,6 @@ details div {
 }
 img {
 	width: 240px;
-    position: absolute;
-    top: 40px;
-    left: 240px;
 }
 
 .attribution { 
